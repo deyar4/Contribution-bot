@@ -22,7 +22,7 @@ else:
 # Define the commit payload
 payload = {
     "message": f"I am the bot that updated Dyars profile for the day number {now.strftime('%d')}",
-    "content": joke.encode("base64").decode("utf-8")
+    "content": base64.b64encode(joke.encode("utf-8")).decode("utf-8")
 }
 
 # Make the commit request
