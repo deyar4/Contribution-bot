@@ -1,6 +1,5 @@
 import base64
 import time
-import random
 import os
 import requests
 
@@ -10,7 +9,6 @@ GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
 DAD_JOKE_API_URL = "https://icanhazdadjoke.com/"
 
 while True:
-    time.sleep(8 * 60 * 60 + random.randint(-60, 60))
     # Fetch a random dad joke from the API
     headers = {"Accept": "application/json"}
     response = requests.get(DAD_JOKE_API_URL, headers=headers)
@@ -33,6 +31,7 @@ while True:
 
     if response.status_code == 200:
         print(f"Committed successfully! Day {now.strftime('%d')} of the streak.")
+        time.sleep(8 * 60 * 60)
     else:
         print(f"Failed to commit.")
 
