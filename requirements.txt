@@ -1,3 +1,3 @@
-requests==2.25.1
-PyGithub==1.55
-base64==0.1.0
+requests
+PyGithub
+base64
