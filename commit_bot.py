@@ -31,7 +31,8 @@ while True:
 
     if response.status_code == 200:
         print(f"Committed successfully! Day {now.strftime('%d')} of the streak.")
-        time.sleep(8 * 60 * 60)
     else:
         print(f"Failed to commit.")
+
+    time.sleep(8 * 60 * 60)
 
